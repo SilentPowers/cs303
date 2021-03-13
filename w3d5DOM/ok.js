@@ -17,20 +17,20 @@
 
 //annoymous fcn
 
-window.onload = function(){
-  document.getElementById("ok").onclick = function(){
-    const okButton = document.getElementById("ok");
-    okButton.className = "fancy";
-    setTimeout(reset, 1000);
-  }
-}
+// window.onload = function(){
+//   document.getElementById("ok").onclick = function(){
+//     const okButton = document.getElementById("ok");
+//     okButton.className = "fancy";
+//     setTimeout(reset, 1000);
+//   }
+// }
 
 
-function reset(){
-  const okButton = document.getElementById("ok");
-  okButton.className = "";
-alert(" You clicked ok!!");
-}
+// function reset(){
+//   const okButton = document.getElementById("ok");
+//   okButton.className = "";
+// alert(" You clicked ok!!");
+// }
 
 
 
