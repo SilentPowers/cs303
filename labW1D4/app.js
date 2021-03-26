@@ -2,7 +2,7 @@
 
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-// module.exports = { ucFirst, getMaxSubSum, truncate, camelize, checkSpam,extractCurrencyValue }; //add all of your function names here that you need for the node mocha tests
+ //module.exports = { ucFirst, getMaxSubSum, truncate, camelize, checkSpam,extractCurrencyValue }; //add all of your function names here that you need for the node mocha tests
 
 
 /**
@@ -84,21 +84,32 @@ That is: removes all dashes, each word after dash becomes uppercased.
  * @returns{string} of camelCase 
  *
  */
-function camelize(str) {
-  let newStr = "";
-  str = str.split("-");
+// function camelize(str) {
+//   let newStr = "";
+//   str = str.split("-");
   
 
-  for(const el of str){
+//   for(const el of str){
 
-    if(el === ""){
-      continue;
-    }
-    newStr = newStr + el.replace(el[0], el[0].toUpperCase());
-  }
-  newStr = newStr.replace(newStr[0], newStr[0].toLowerCase());
-return newStr;
+//     if(el === ""){
+//       continue;
+//     }
+//     newStr = newStr + el.replace(el[0], el[0].toUpperCase());
+//   }
+//   newStr = newStr.replace(newStr[0], newStr[0].toLowerCase());
+// return newStr;
 
+// }
+
+function camelize(str) {
+  return str
+    .split('-') // splits 'my-long-word' into array ['my', 'long', 'word']
+    .map(
+      // capitalizes first letters of all array items except the first one
+      // converts ['my', 'long', 'word'] into ['my', 'Long', 'Word']
+      (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join(''); // joins ['my', 'Long', 'Word'] into 'myLongWord'
 }
 
 /**
@@ -116,4 +127,5 @@ function extractCurrencyValue(str) {
    //return Number(str.slice(1));
 
 }
+
 

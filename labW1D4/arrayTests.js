@@ -1,14 +1,14 @@
 "use strict";
 /* global assert  ucFirst checkSpam truncate extractCurrencyValue camelize  */
 /* comment out the node specific code when going to the browser*/
-// const assert = require("assert");  //always need this with node
-// const myExports = require("./app.js");  //with node need the name of your file with your functions here
-// const getMaxSubSum = myExports.getMaxSubSum;  //do this for all of the functions used in the Mocha tests
-// const ucFirst = myExports.ucFirst; 
-// const truncate = myExports.truncate; 
-// const camelize = myExports.camelize; 
-// const checkSpam = myExports.checkSpam;
-// const extractCurrencyValue = myExports.extractCurrencyValue;
+const assert = require("assert");  //always need this with node
+const myExports = require("./app.js");  //with node need the name of your file with your functions here
+const getMaxSubSum = myExports.getMaxSubSum;  //do this for all of the functions used in the Mocha tests
+const ucFirst = myExports.ucFirst; 
+const truncate = myExports.truncate; 
+const camelize = myExports.camelize; 
+const checkSpam = myExports.checkSpam;
+const extractCurrencyValue = myExports.extractCurrencyValue;
 
 
 
@@ -23,19 +23,19 @@ describe("ucFirst", function() {
   });
 });
 
-// describe("checkSpam", function() {
-//   it('finds spam in "buy ViAgRA now"', function() {
-//     assert.equal(checkSpam('buy ViAgRA now'));
-//   });
+describe("checkSpam", function() {
+  it('finds spam in "buy ViAgRA now"', function() {
+    assert.strictEqual(checkSpam('buy ViAgRA now'));
+  });
 
-//   it('finds spam in "free xxxxx"', function() {
-//     assert.equal(checkSpam('free xxxxx'));
-//   });
+  it('finds spam in "free xxxxx"', function() {
+    assert.strictEqual(checkSpam('free xxxxx'));
+  });
 
-//   it('no spam in "innocent rabbit"', function() {
-//     assert.equal(checkSpam('innocent rabbit'));
-//   });
-// });
+  it('no spam in "innocent rabbit"', function() {
+    assert.strictEqual(checkSpam('innocent rabbit'));
+  });
+});
 
 /* eslint-enable quotes */
 describe("truncate", function() {
