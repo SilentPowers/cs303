@@ -56,6 +56,7 @@ function inBetween(low, high) {
 
   let i = 0;
   while (i < 10) {
+    //otherwise shooter fcn gets i from outer fcn 
     let j = i;
     // let shooter = function() { // create a shooter function,
     //   console.log(j); // that should show its number

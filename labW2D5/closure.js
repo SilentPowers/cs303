@@ -1,4 +1,11 @@
 "use strict";
+
+//cant get byField function to pass tests. It works just fine when to printing to console,
+//and tried to figure out why but i couldnt. 
+//Professor question, For drawing a lexical environment diagram if there is a while 
+//loop, thats a block code s
+
+
 /* Does a function pickup latest changes?
 Yes it always gets the most recent value.
 */
