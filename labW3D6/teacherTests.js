@@ -23,4 +23,4 @@ describe("test inheritance from Person", function () {
         assert.strictEqual(bob.teach("Physics"), "Bob is now teaching Physics");
     });
 
-})
+});
